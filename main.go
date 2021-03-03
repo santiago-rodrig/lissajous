@@ -48,7 +48,7 @@ func lissajous(out io.Writer) {
 		for t := 0.0; t < cycles*2*math.Pi; t += res {
 			x := math.Sin(t)
 			y := math.Sin(t*freq + phase)
-			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), uint8(rand.Intn(4)))
+			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), uint8(1+rand.Intn(3)))
 		}
 
 		phase += 0.1
